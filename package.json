@@ -1,0 +1,11 @@
+{
+  "name": "iot-mailbox-app",
+  "version": "1.0.0",
+  "description": "The objective of the IOT Mailbox Simulator is to mimic how an Internet of Things",
+  "main": "has arrived",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rodrigo Lima - rniochy",
+  "license": "ISC"
+}
