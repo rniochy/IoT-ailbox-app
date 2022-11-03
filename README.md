@@ -6,7 +6,7 @@ has arrived. In doing so it will provide you with experience using callbacks
 to communicate state between different components of an app that are dependent
 on one another.
 
-<!-- ### Requirements & Constraints
+### Requirements & Constraints
 
 - Even though this app is specified using Javascript concepts and terminology
 you are free to implement it in the language of your choice. 
@@ -17,7 +17,7 @@ process, and to signal the app web page with the state of the mailbox door
 shouldn't exceed the time it normally takes to open or close the door or you
 might miss a delivery!
 ```
-/**
+<!-- /**
  * Monitor the light levels inside an IOT enabled snail mailbox to detect
  * when the mailbox door has been opened and closed.
  * @class IOTMailbox

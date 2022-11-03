@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style/style.css" rel="stylesheet" type="text/css"/>
+    <title>IoT Mailbox</title>
+</head>
+<body>
+    <header></header>
+    <main id="mailbox-content">
+        <div id="mail-box-data">
+            <p class="mailbox-data"></p>
+        </div>
+        <div>
+            <input id="mailbox-monitoring-interval" min="500" type="number" placeholder="Monitoring interval up to 500 ms"  />
+        </div>
+        <div id="mail-box-buttons">
+            <button class="mailbox-button" id="mailbox-button-start">Start Monitoring</button>
+            <button class="mailbox-button" id="mailbox-button-stop">Stop Monitoring</button>
+            <button class="mailbox-button" id="mailbox-button-reset">Reset Monitoring</button>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="../js/app.js"></script>
+</body>
+</html>
