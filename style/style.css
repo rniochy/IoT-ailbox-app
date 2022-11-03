@@ -36,9 +36,18 @@
      padding: .3em;
 }
  .mailbox-button {
-     width: calc(16rem/3);
+     width: calc(17rem/3);
      padding: .3em;
      border-radius: 3px;
+}
+#mailbox-button-start {
+     background-color: rgb(31, 120, 243);
+}
+#mailbox-button-reset {
+     background-color: rgb(22, 230, 122);
+}
+#mailbox-button-stop {
+     background-color: rgb(228, 47, 27);
 }
 @media screen and (min-width: 300px) and (max-width: 480px) {
     #mailbox-content {
