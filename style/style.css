@@ -28,12 +28,15 @@
 #mailbox-monitoring-interval {
     border: 1px solid #ccc;
     width: 80%;
+    padding: .4em;
+    border-radius: 3px;
 }
 #mail-box-buttons {
      width: 17.5rem;
      display: flex;
      column-gap: 0.1rem;
      padding: .3em;
+     margin-top: 3px;
 }
  .mailbox-button {
      width: calc(17rem/3);
@@ -49,10 +52,25 @@
 #mailbox-button-stop {
      background-color: rgb(228, 47, 27);
 }
-@media screen and (min-width: 300px) and (max-width: 480px) {
-    #mailbox-content {
-        margin: 0;
+@media screen and (max-width: 319px) {
+    #mailbox-data {
+        width: 160%;
    }
+    .mailbox-data-content {
+         width: 80%;
+    }
+    #mailbox-monitoring-interval-content{
+        width:  160%;
+    }
+    #mailbox-monitoring-interval {
+        width: 80%;
+    }
+    #mail-box-buttons {
+         display: flex;
+         flex-direction: column;
+         row-gap: 1.5px;
+         padding: 0;
+    }
 
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
