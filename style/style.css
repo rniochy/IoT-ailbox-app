@@ -23,11 +23,11 @@
 }
 #mailbox-monitoring-interval-content{
     margin-top: 5px;
-    width: 17.5rem;
+    width: 80vw;
 }
 #mailbox-monitoring-interval {
     border: 1px solid #ccc;
-    width: 80%;
+    width: 17.5rem;;
     padding: .4em;
     border-radius: 3px;
 }
