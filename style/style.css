@@ -6,17 +6,44 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
-     margin: 0 auto;
-}
 #mailbox-content {
-    height: 70vh;
-    width: 80vw;
-    display: flex;
-    flex-direction: column;
+     padding: 0.3rem;
+     height: 70vh;
+     width: 80vw;
+     display: flex;
+     flex-direction: column;
 }
-
-@media screen and (min-width: 320px) and (max-width: 480px) {
+ .mailbox-data-content{
+     height: 15rem;
+     width: 17.5rem;
+     overflow-y: scroll;
+     padding: 0.5rem;
+     border: 1px solid #000;
+     border-radius: 3px;
+}
+#mailbox-monitoring-interval-content{
+    margin-top: 5px;
+    width: 17.5rem;
+}
+#mailbox-monitoring-interval {
+    border: 1px solid #ccc;
+    width: 80%;
+}
+#mail-box-buttons {
+     width: 17.5rem;
+     display: flex;
+     column-gap: 0.1rem;
+     padding: .3em;
+}
+ .mailbox-button {
+     width: calc(16rem/3);
+     padding: .3em;
+     border-radius: 3px;
+}
+@media screen and (min-width: 300px) and (max-width: 480px) {
+    #mailbox-content {
+        margin: 0;
+   }
 
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
