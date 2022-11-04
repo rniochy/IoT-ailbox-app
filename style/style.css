@@ -54,12 +54,15 @@
 }
 #mailbox-button-start:hover {
      background-color: rgb(31, 120, 243);
+     color: #ffffff;
 }
 #mailbox-button-reset:hover {
      background-color: rgb(22, 230, 122);
+     color: #ffffff;
 }
 #mailbox-button-stop:hover {
      background-color: rgb(228, 47, 27);
+     color: #ffffff;
 }
 @media screen and (max-width: 319px) {
      body {
@@ -90,6 +93,19 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 1279px) {
-
-
+     #mailbox-content {
+          width: 20rem;
+     }
+     #mailbox-data {
+          width: 18rem;
+     }
+      .mailbox-data-content{
+          width: 18rem;
+     }
+     #mailbox-monitoring-interval-content{
+          width: 18rem;
+     }
+     #mail-box-buttons {
+          width: 18rem;
+     }
 }
