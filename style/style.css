@@ -73,7 +73,7 @@
 }
 @media screen and (max-width: 319px) {
      * {
-           font-size: smaller;
+           font-size: 11pt;
      }
      #mailbox-content {
           margin: 0;
