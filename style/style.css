@@ -1,3 +1,9 @@
+:root {
+     --with-color: #ffffff;
+     --border-solid: 1px solid;
+     --one-hundred: 100%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +11,7 @@
     border: 0;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
 }
 
 #mailbox-content {
@@ -18,21 +25,21 @@
      width: 100%;
      overflow-y: scroll;
      padding: 0.5rem;
-     border: 1px solid #000;
+     border: var(--border-solid) #000;
      border-radius: 3px;
 }
 #mailbox-monitoring-interval-content{
     margin-top: 5px;
-    width: 100%;
+    width: var(--one-hundred);
 }
 #mailbox-monitoring-interval {
-    border: 1px solid #ccc;
-    width: 100%;
+    border: var(--border-solid) #ccc;
+    width: var(--one-hundred);
     padding: .4em;
     border-radius: 3px;
 }
 #mail-box-buttons {
-     width: 100%;
+     width: var(--one-hundred);
      display: flex;
      column-gap: 0.1rem;
      padding: .3em;
@@ -54,19 +61,19 @@
 }
 #mailbox-button-start:hover {
      background-color: rgb(31, 120, 243);
-     color: #ffffff;
+     color: var(--with-color);
 }
 #mailbox-button-reset:hover {
      background-color: rgb(22, 230, 122);
-     color: #ffffff;
+     color: var(--with-color);
 }
 #mailbox-button-stop:hover {
      background-color: rgb(228, 47, 27);
-     color: #ffffff;
+     color: var(--with-color);
 }
 @media screen and (max-width: 319px) {
-     body {
-           font-size: small;
+     * {
+           font-size: smaller;
      }
      #mailbox-content {
           margin: 0;
@@ -93,19 +100,13 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 1279px) {
+     * { 
+          font-size: medium;
+     }
      #mailbox-content {
+          width: 22rem;
+     }
+     #mailbox-data, #mailbox-monitoring-interval-content, .mailbox-data-content, #mail-box-buttons  {
           width: 20rem;
-     }
-     #mailbox-data {
-          width: 18rem;
-     }
-      .mailbox-data-content{
-          width: 18rem;
-     }
-     #mailbox-monitoring-interval-content{
-          width: 18rem;
-     }
-     #mail-box-buttons {
-          width: 18rem;
      }
 }
