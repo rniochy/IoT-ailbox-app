@@ -58,7 +58,6 @@
       this.lastLightLevel = lightLevel;
       
       console.log(this.getMessage());
-      return this.getMessage();
     }
 
     setMesaage(message){
