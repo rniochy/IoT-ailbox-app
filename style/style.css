@@ -12,6 +12,7 @@
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: small;
+    user-select: none;
 }
  #header {
       height: 10vh;
@@ -21,7 +22,11 @@
       border-bottom: var(--border-solid) #ccc;
       position: relative;
  }
- #notification {
+ #header span p {
+     font-size: 11pt;
+}
+ #notifications {
+     margin-top: 2px;
       position: absolute;
  }
 #mailbox-content {
@@ -84,6 +89,9 @@
 @media screen and (max-width: 319px) {
      * {
            font-size: 11pt;
+     }
+     #header span p {
+           font-size: smaller;
      }
      #mailbox-content {
           margin: 0;
