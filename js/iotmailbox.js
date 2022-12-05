@@ -24,7 +24,8 @@
      * @memberof IOTMailbox
      */
     startMonitoring = () => {
-      console.log(`Starting monitoring of mailbox...`);
+      this.setMesaage(`Starting monitoring of mailbox...`)
+      console.log(this.getMessage());
       this.intervalID = window.setInterval(this.signalStateChange, this.signalInterval);
     }
   
@@ -53,9 +54,11 @@
         ? Math.random().toFixed(2) * -1 
         : Math.random().toFixed(2);
       this.setMesaage(`Mailbox state changed - lightLevel: ${lightLevel}`)
-      console.log(this.getMessage());
       this.signalCallback(this.lightLevel);
       this.lastLightLevel = lightLevel;
+      
+      console.log(this.getMessage());
+      return this.getMessage();
     }
 
     setMesaage(message){
