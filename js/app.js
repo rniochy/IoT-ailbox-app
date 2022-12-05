@@ -10,16 +10,12 @@ function main(){
 
     const iotmailbox = new IOTMailbox(500, ()=>0);
     
-    
-    
     startButton.addEventListener("click", ()=>{
         iotmailbox.startMonitoring();
-        window.setTimeout(()=> iotmailbox.stopMonitoring(), 5000);
     })
     
     stopButton.addEventListener("click", ()=>{
-       mailbox.stopMonitoring();
-    
+       iotmailbox.stopMonitoring();
     })
 }
 
