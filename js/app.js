@@ -7,8 +7,10 @@ const mailbox = document.getElementById("mailbox-data-content");
 
 
 function main(){
-
-    const iotmailbox = new IOTMailbox(500, ()=>0);
+    
+    alert(numberOfInterval,value);
+    !numberOfInterval.value ? numberOfInterval.value = 5000 : "";
+    const iotmailbox = new IOTMailbox(numberOfInterval, ()=>0);
     
     startButton.addEventListener("click", ()=>{
         iotmailbox.startMonitoring();
