@@ -19,7 +19,7 @@ class IOTMailbox {
    * @memberof IOTMailbox
    */
   startMonitoring = () => {
-    this.mailBox.innerHTML += `<h5>Starting monitoring of mailbox...</h5>`;
+    this.mailBox.innerHTML += `<h5 class='subTitle'>Starting monitoring of mailbox...</h5>`;
     this.mailBox.innerHTML += `${this.intervalID = window.setInterval(this.signalStateChange, this.signalInterval)}`;
   }
 
@@ -31,7 +31,7 @@ class IOTMailbox {
     if (this.intervalID === null) return;
     window.clearInterval(this.intervalID);
     this.intervalID = null;
-    this.mailBox.innerHTML += `<h5>Mailbox monitoring stopped...</h5>`;
+    this.mailBox.innerHTML += `<h5 class='subTitle'>Mailbox monitoring stopped...</h5>`;
   }
 
   /**
@@ -46,7 +46,7 @@ class IOTMailbox {
     const lightLevel = this.lastLightLevel >= 0 
       ? Math.random().toFixed(2) * -1 
       : Math.random().toFixed(2);
-      this.mailBox.innerHTML += `<li>Mailbox state changed - lightLevel: ${lightLevel}</li>`;
+      this.mailBox.innerHTML += `<li class='mailBoxLi' >Mailbox state changed - lightLevel: ${lightLevel}</li>`;
     this.signalCallback(this.lightLevel); 
     this.lastLightLevel = lightLevel;
   }
