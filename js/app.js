@@ -7,13 +7,15 @@ const mailbox = document.getElementById("mailbox-data-content");
 console.log(numberOfInterval.innerText)
 
 function main(){
-    
-    !numberOfInterval.value ? numberOfInterval.value = 5000 : "";
-    const iotmailbox = new IOTMailbox(500, ()=>1000, mailbox);
-    
-    startButton.addEventListener("click", ()=>{
-     iotmailbox.startMonitoring();
-    });
+   
+   let  iotmailbox;
+   
+   startButton.addEventListener("click", ()=>{
+      const numberInterval = !numberOfInterval.value ? numberOfInterval.value = 500 : numberOfInterval.value;
+      iotmailbox = new IOTMailbox(numberOfInterval.value, ()=>1000, mailbox);
+      iotmailbox.startMonitoring();
+      console.log(numberInterval)
+   });
     
     stopButton.addEventListener("click", ()=>{
       iotmailbox.stopMonitoring();
