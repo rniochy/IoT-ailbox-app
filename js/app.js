@@ -4,6 +4,7 @@ const resetButton = document.getElementById("mailbox-button-reset");
 const numberOfInterval = document.getElementById("mailbox-monitoring-interval");
 const mailbox = document.getElementById("mailbox-data-content");
 
+console.log(numberOfInterval.innerText)
 
 function main(){
     
@@ -11,13 +12,18 @@ function main(){
     const iotmailbox = new IOTMailbox(500, ()=>1000, mailbox);
     
     startButton.addEventListener("click", ()=>{
-       const msg =  iotmailbox.startMonitoring();
+     iotmailbox.startMonitoring();
     });
     
     stopButton.addEventListener("click", ()=>{
-       const msg = iotmailbox.stopMonitoring();
+      iotmailbox.stopMonitoring();
     });
-
+    resetButton.addEventListener("click", ()=>{
+      iotmailbox.stopMonitoring();
+      mailbox.innerText = "";
+    });
+    
 }
+
 
 main();
