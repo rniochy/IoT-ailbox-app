@@ -7,18 +7,22 @@ const mailbox = document.getElementById("mailbox-data-content");
 
 
 function main(){
+    console.log()
     
-    alert(numberOfInterval,value);
     !numberOfInterval.value ? numberOfInterval.value = 5000 : "";
-    const iotmailbox = new IOTMailbox(numberOfInterval, ()=>0);
+    const iotmailbox = new IOTMailbox(500, ()=>1000);
     
     startButton.addEventListener("click", ()=>{
-        iotmailbox.startMonitoring();
-    })
+       const msg =  iotmailbox.startMonitoring();
+       console.log(msg)
+       
+    });
     
     stopButton.addEventListener("click", ()=>{
-       iotmailbox.stopMonitoring();
-    })
+       const msg = iotmailbox.stopMonitoring();
+       console.log(msg)
+    });
+
 }
 
 main();
