@@ -68,29 +68,33 @@
      padding: .3em;
      margin-top: 3px;
 }
- .mailbox-button {
+#mailbox-button-start {
+     background-color: rgba(31, 120, 243, .9);
      width: calc(17rem/3);
      padding: .3em;
      border-radius: 3px;
 }
-#mailbox-button-start {
-     background-color: rgba(31, 120, 243, .9);
-}
 #mailbox-button-reset {
      background-color: rgba(22, 230, 122,.9);
+     width: calc(17rem/3);
+     padding: .3em;
+     border-radius: 3px;
 }
 #mailbox-button-stop {
      background-color: rgba(228, 47, 27,.9);
+     width: calc(17rem/3);
+     padding: .3em;
+     border-radius: 3px;
 }
-#mailbox-button-start:hover {
+.mailbox-button-start:hover {
      background-color: rgb(31, 120, 243);
      color: var(--with-color);
 }
-#mailbox-button-reset:hover {
+.mailbox-button-reset:hover {
      background-color: rgb(22, 230, 122);
      color: var(--with-color);
 }
-#mailbox-button-stop:hover {
+.mailbox-button-stop:hover {
      background-color: rgb(228, 47, 27);
      color: var(--with-color);
 }
