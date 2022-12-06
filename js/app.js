@@ -5,12 +5,11 @@ const numberOfInterval = document.getElementById("mailbox-monitoring-interval");
 const mailbox = document.getElementById("mailbox-data-content");
 
 
-
+console.log(mailbox)
 function main(){
-    console.log()
     
     !numberOfInterval.value ? numberOfInterval.value = 5000 : "";
-    const iotmailbox = new IOTMailbox(500, ()=>1000);
+    const iotmailbox = new IOTMailbox(500, ()=>1000, mailbox);
     
     startButton.addEventListener("click", ()=>{
        const msg =  iotmailbox.startMonitoring();

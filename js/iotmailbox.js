@@ -5,11 +5,12 @@ class IOTMailbox {
    * @param {function} signalCallback Function to invoke when the timer interval expires.
    * @memberof IOTMailbox
    */
-  constructor(signalInterval = 500, signalCallback) {
+  constructor(signalInterval = 500, signalCallback, mailBox) {
     this.signalInterval = signalInterval;
     this.signalCallback = signalCallback;
     this.intervalID = null;
     this.lastLightLevel = 0;
+    this.mailBox = mailBox;
   }
 
   /**
@@ -18,8 +19,8 @@ class IOTMailbox {
    * @memberof IOTMailbox
    */
   startMonitoring = () => {
-    console.log(`Starting monitoring of mailbox...`);
-    this.intervalID = window.setInterval(this.signalStateChange, this.signalInterval);
+    this.mailBox.innerHTML += `<h5>Starting monitoring of mailbox...</h5>`;
+    this.mailBox.innerHTML += `${this.intervalID = window.setInterval(this.signalStateChange, this.signalInterval)}`;
   }
 
   /**
@@ -30,7 +31,7 @@ class IOTMailbox {
     if (this.intervalID === null) return;
     window.clearInterval(this.intervalID);
     this.intervalID = null;
-    console.log(`Mailbox monitoring stopped...`);
+    this.mailBox.innerHTML += `<h5>Mailbox monitoring stopped...</h5>`;
   }
 
   /**
@@ -45,8 +46,8 @@ class IOTMailbox {
     const lightLevel = this.lastLightLevel >= 0 
       ? Math.random().toFixed(2) * -1 
       : Math.random().toFixed(2);
-    console.log(`Mailbox state changed - lightLevel: ${lightLevel}`);
-    this.signalCallback(this.lightLevel);
+      this.mailBox.innerHTML += `<li>Mailbox state changed - lightLevel: ${lightLevel}</li>`;
+    this.signalCallback(this.lightLevel); 
     this.lastLightLevel = lightLevel;
   }
 };

@@ -35,7 +35,7 @@
      width: 80vw;
      margin: 0 auto;
 }
- .mailbox-data-content{
+ #mailbox-data-content{
      height: 15rem;
      width: 100%;
      overflow-y: scroll;
