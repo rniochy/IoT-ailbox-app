@@ -14,6 +14,8 @@ function main(){
       const numberInterval = !numberOfInterval.value ? numberOfInterval.value = 500 : numberOfInterval.value;
       iotmailbox = new IOTMailbox(numberInterval, ()=>1000, mailbox);
       iotmailbox.startMonitoring();
+
+      startButton.setAttribute("disbaled", true)
    });
     
     stopButton.addEventListener("click", ()=>{
