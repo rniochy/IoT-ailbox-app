@@ -6,6 +6,12 @@ const mailbox = document.getElementById("mailbox-data-content");
 
 console.log(numberOfInterval.innerText)
 
+function desableButton (node){
+    node.setAttribute('disabled', true)
+}
+function ableButton(node){
+   node.removeAttribute('disabled');
+}
 function main(){
    
    let  iotmailbox;
@@ -15,18 +21,25 @@ function main(){
       iotmailbox = new IOTMailbox(numberInterval, ()=>1000, mailbox);
       iotmailbox.startMonitoring();
 
-      startButton.setAttribute("disbaled", true)
+      desableButton(startButton);
+      stopButton.removeAttribute('disabled');
    });
     
     stopButton.addEventListener("click", ()=>{
       iotmailbox.stopMonitoring();
+      desableButton(stopButton)
+      ableButton(startButton);
     });
     resetButton.addEventListener("click", ()=>{
       iotmailbox.stopMonitoring();
       mailbox.innerText = "";
+         ableButton(startButton);
+         ableButton(stopButton);
     });
     
 }
+
+
 
 
 main();
