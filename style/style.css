@@ -100,25 +100,31 @@
 }
 @media screen and (max-width: 319px) {
      * {
-           font-size: 11pt;
+           font-size: 12pt;
      }
      #header span p {
            font-size: smaller;
      }
      #mailbox-content {
           margin: 0;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          font-size: 9pt;
      }
     #mailbox-data, #mailbox-monitoring-interval-content, #header {
-        width: 157%;
+        width:100%;
    }
     .mailbox-data-content, #mailbox-monitoring-interval{
          width: 80%;
     }
+
     #mail-box-buttons {
          display: flex;
          flex-direction: column;
          row-gap: 1.5px;
          padding: 0;
+;
     }
 
 }
