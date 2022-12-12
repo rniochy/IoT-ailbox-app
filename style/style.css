@@ -136,7 +136,9 @@
      #mailbox-content {
           width: 22rem;
      }
-     #mailbox-data, #mailbox-monitoring-interval-content, .mailbox-data-content, #mail-box-buttons  {
+     #mailbox-data, 
+     #mailbox-monitoring-interval-content, 
+     .mailbox-data-content, #mail-box-buttons  {
           width: 20rem;
      }
 }
